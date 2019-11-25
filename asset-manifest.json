@@ -1,24 +1,18 @@
 {
   "files": {
     "main.css": "/GM-Dashboard/static/css/main.1cafa329.chunk.css",
-    "main.js": "/GM-Dashboard/static/js/main.209148f0.chunk.js",
-    "main.js.map": "/GM-Dashboard/static/js/main.209148f0.chunk.js.map",
+    "main.js": "/GM-Dashboard/static/js/main.56a9f321.chunk.js",
+    "main.js.map": "/GM-Dashboard/static/js/main.56a9f321.chunk.js.map",
     "runtime~main.js": "/GM-Dashboard/static/js/runtime~main.6e1f5d31.js",
     "runtime~main.js.map": "/GM-Dashboard/static/js/runtime~main.6e1f5d31.js.map",
-    "static/css/2.9d5e3c4e.chunk.css": "/GM-Dashboard/static/css/2.9d5e3c4e.chunk.css",
-    "static/js/2.ea21af55.chunk.js": "/GM-Dashboard/static/js/2.ea21af55.chunk.js",
-    "static/js/2.ea21af55.chunk.js.map": "/GM-Dashboard/static/js/2.ea21af55.chunk.js.map",
+    "static/css/2.f1f0cbbc.chunk.css": "/GM-Dashboard/static/css/2.f1f0cbbc.chunk.css",
+    "static/js/2.eb9dfd1a.chunk.js": "/GM-Dashboard/static/js/2.eb9dfd1a.chunk.js",
+    "static/js/2.eb9dfd1a.chunk.js.map": "/GM-Dashboard/static/js/2.eb9dfd1a.chunk.js.map",
     "index.html": "/GM-Dashboard/index.html",
-    "precache-manifest.fbf6d7a6163eaf3260d577ad35451841.js": "/GM-Dashboard/precache-manifest.fbf6d7a6163eaf3260d577ad35451841.js",
+    "precache-manifest.a1a20f04753d0f35604d2afef4dab9f7.js": "/GM-Dashboard/precache-manifest.a1a20f04753d0f35604d2afef4dab9f7.js",
     "service-worker.js": "/GM-Dashboard/service-worker.js",
-    "static/css/2.9d5e3c4e.chunk.css.map": "/GM-Dashboard/static/css/2.9d5e3c4e.chunk.css.map",
+    "static/css/2.f1f0cbbc.chunk.css.map": "/GM-Dashboard/static/css/2.f1f0cbbc.chunk.css.map",
     "static/css/main.1cafa329.chunk.css.map": "/GM-Dashboard/static/css/main.1cafa329.chunk.css.map",
-    "static/media/ayo-ogunseinde-2.jpg": "/GM-Dashboard/static/media/ayo-ogunseinde-2.bfc688ca.jpg",
-    "static/media/clem-onojeghuo-2.jpg": "/GM-Dashboard/static/media/clem-onojeghuo-2.bb4b9ac9.jpg",
-    "static/media/damir-bosnjak.jpg": "/GM-Dashboard/static/media/damir-bosnjak.a6f24e7d.jpg",
-    "static/media/joe-gardner-2.jpg": "/GM-Dashboard/static/media/joe-gardner-2.76ff47ae.jpg",
-    "static/media/logo.svg": "/GM-Dashboard/static/media/logo.5d5d9eef.svg",
-    "static/media/mike.jpg": "/GM-Dashboard/static/media/mike.aab414f7.jpg",
     "static/media/paper-dashboard.scss?v=1.1.0": "/GM-Dashboard/static/media/nucleo-icons.f32ed5ad.eot"
   }
 }
