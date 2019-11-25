@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/GM-Dashboard/static/css/main.1cafa329.chunk.css",
+    "main.css": "/GM-Dashboard/static/css/main.44d9a66f.chunk.css",
     "main.js": "/GM-Dashboard/static/js/main.56a9f321.chunk.js",
     "main.js.map": "/GM-Dashboard/static/js/main.56a9f321.chunk.js.map",
     "runtime~main.js": "/GM-Dashboard/static/js/runtime~main.6e1f5d31.js",
@@ -9,10 +9,10 @@
     "static/js/2.eb9dfd1a.chunk.js": "/GM-Dashboard/static/js/2.eb9dfd1a.chunk.js",
     "static/js/2.eb9dfd1a.chunk.js.map": "/GM-Dashboard/static/js/2.eb9dfd1a.chunk.js.map",
     "index.html": "/GM-Dashboard/index.html",
-    "precache-manifest.a1a20f04753d0f35604d2afef4dab9f7.js": "/GM-Dashboard/precache-manifest.a1a20f04753d0f35604d2afef4dab9f7.js",
+    "precache-manifest.5fa034610ffd8d9722c92a94e00e5cd0.js": "/GM-Dashboard/precache-manifest.5fa034610ffd8d9722c92a94e00e5cd0.js",
     "service-worker.js": "/GM-Dashboard/service-worker.js",
     "static/css/2.f1f0cbbc.chunk.css.map": "/GM-Dashboard/static/css/2.f1f0cbbc.chunk.css.map",
-    "static/css/main.1cafa329.chunk.css.map": "/GM-Dashboard/static/css/main.1cafa329.chunk.css.map",
+    "static/css/main.44d9a66f.chunk.css.map": "/GM-Dashboard/static/css/main.44d9a66f.chunk.css.map",
     "static/media/paper-dashboard.scss?v=1.1.0": "/GM-Dashboard/static/media/nucleo-icons.f32ed5ad.eot"
   }
 }
