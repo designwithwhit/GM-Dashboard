@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GM-Dashboard/static/css/main.44d9a66f.chunk.css",
-    "main.js": "/GM-Dashboard/static/js/main.74338cad.chunk.js",
-    "main.js.map": "/GM-Dashboard/static/js/main.74338cad.chunk.js.map",
+    "main.js": "/GM-Dashboard/static/js/main.af8e4f5b.chunk.js",
+    "main.js.map": "/GM-Dashboard/static/js/main.af8e4f5b.chunk.js.map",
     "runtime~main.js": "/GM-Dashboard/static/js/runtime~main.6e1f5d31.js",
     "runtime~main.js.map": "/GM-Dashboard/static/js/runtime~main.6e1f5d31.js.map",
     "static/css/2.f1f0cbbc.chunk.css": "/GM-Dashboard/static/css/2.f1f0cbbc.chunk.css",
     "static/js/2.f83f3237.chunk.js": "/GM-Dashboard/static/js/2.f83f3237.chunk.js",
     "static/js/2.f83f3237.chunk.js.map": "/GM-Dashboard/static/js/2.f83f3237.chunk.js.map",
     "index.html": "/GM-Dashboard/index.html",
-    "precache-manifest.b7be94710a0c7ff58f1d8cfb59e2db9f.js": "/GM-Dashboard/precache-manifest.b7be94710a0c7ff58f1d8cfb59e2db9f.js",
+    "precache-manifest.957a66c07a3fece03314ef9dd5f3b567.js": "/GM-Dashboard/precache-manifest.957a66c07a3fece03314ef9dd5f3b567.js",
     "service-worker.js": "/GM-Dashboard/service-worker.js",
     "static/css/2.f1f0cbbc.chunk.css.map": "/GM-Dashboard/static/css/2.f1f0cbbc.chunk.css.map",
     "static/css/main.44d9a66f.chunk.css.map": "/GM-Dashboard/static/css/main.44d9a66f.chunk.css.map",

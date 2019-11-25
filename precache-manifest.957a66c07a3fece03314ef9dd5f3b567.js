@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f7295da112dc053fe6150be3b640f5cf",
+    "revision": "1c715d03cb1cbbbcbc23585a892e17af",
     "url": "/GM-Dashboard/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GM-Dashboard/static/css/2.f1f0cbbc.chunk.css"
   },
   {
-    "revision": "75396843827daeab8310",
+    "revision": "5ceae0647dc9a15c3f87",
     "url": "/GM-Dashboard/static/css/main.44d9a66f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GM-Dashboard/static/js/2.f83f3237.chunk.js"
   },
   {
-    "revision": "75396843827daeab8310",
-    "url": "/GM-Dashboard/static/js/main.74338cad.chunk.js"
+    "revision": "5ceae0647dc9a15c3f87",
+    "url": "/GM-Dashboard/static/js/main.af8e4f5b.chunk.js"
   },
   {
     "revision": "2c106f5ec04b1d16d0f8",
