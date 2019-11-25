@@ -57,7 +57,7 @@ class Dashboard extends React.Component {
                     <Col md="8" xs="7">
                       <div className="numbers">
                         <p className="card-category">Backlog</p>
-                        <CardTitle tag="p">137</CardTitle>
+                        <CardTitle tag="p">24</CardTitle>
                         <p />
                       </div>
                     </Col>
@@ -79,7 +79,7 @@ class Dashboard extends React.Component {
                     <Col md="8" xs="7">
                       <div className="numbers">
                         <p className="card-category">Total Closed</p>
-                        <CardTitle tag="p">221</CardTitle>
+                        <CardTitle tag="p">382</CardTitle>
                         <p />
                       </div>
                     </Col>
@@ -171,47 +171,47 @@ class Dashboard extends React.Component {
                       <tr>
                         <td>2</td>
                         <td>Jenny Atkins</td>
-                        <td>19</td>
+                        <td>38</td>
                       </tr>
                       <tr>
                         <td>3</td>
                         <td>Kayley Edgin</td>
-                        <td>10</td>
+                        <td>35</td>
                       </tr>
                       <tr>
                         <td>4</td>
                         <td>Joe Fisher</td>
-                        <td>0</td>
+                        <td>24</td>
                       </tr>
                       <tr>
                         <td>5</td>
                         <td>Fawn Gregory</td>
-                        <td>39</td>
+                        <td>23</td>
                       </tr>
                       <tr>
                         <td>6</td>
                         <td>Kevin Kerr</td>
-                        <td>17</td>
+                        <td>23</td>
                       </tr>
                       <tr>
                         <td>7</td>
                         <td>Sheila Lamb</td>
-                        <td>10</td>
+                        <td>22</td>
                       </tr>
                       <tr>
                         <td>8</td>
                         <td>Al Magbag</td>
-                        <td>0</td>
+                        <td>15</td>
                       </tr>
                       <tr>
                         <td>9</td>
                         <td>Alyssa Morgan</td>
-                        <td>35</td>
+                        <td>13</td>
                       </tr>
                       <tr>
                         <td>10</td>
                         <td>Lillian Quan</td>
-                        <td>17</td>
+                        <td>11</td>
                       </tr>
                       <tr>
                         <td>11</td>
@@ -226,17 +226,17 @@ class Dashboard extends React.Component {
                       <tr>
                         <td>13</td>
                         <td>Dakota Rice</td>
-                        <td>20</td>
+                        <td>0</td>
                       </tr>
                       <tr>
                         <td>14</td>
                         <td>Minerva Hooper</td>
-                        <td>15</td>
+                        <td>0</td>
                       </tr>
                       <tr>
                         <td>15</td>
                         <td>Sage Rodriguez</td>
-                        <td>3</td>
+                        <td>0</td>
                       </tr>
                       <tr>
                         <td>16</td>
@@ -246,12 +246,12 @@ class Dashboard extends React.Component {
                       <tr>
                         <td>17</td>
                         <td>Corey Sliter</td>
-                        <td>20</td>
+                        <td>0</td>
                       </tr>
                       <tr>
                         <td>18</td>
                         <td>Jennifer Walker</td>
-                        <td>13</td>
+                        <td>0</td>
                       </tr>
                       <tr>
                         <td>19</td>
