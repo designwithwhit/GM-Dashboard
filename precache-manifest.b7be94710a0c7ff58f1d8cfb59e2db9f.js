@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a57e5c7ad7aba38ad6aea90ed744b554",
+    "revision": "f7295da112dc053fe6150be3b640f5cf",
     "url": "/GM-Dashboard/index.html"
   },
   {
-    "revision": "a7aa5da0eb9170ff9abe",
+    "revision": "8346170a53f9b0e153a8",
     "url": "/GM-Dashboard/static/css/2.f1f0cbbc.chunk.css"
   },
   {
-    "revision": "5ae8a960863c259bbb3d",
+    "revision": "75396843827daeab8310",
     "url": "/GM-Dashboard/static/css/main.44d9a66f.chunk.css"
   },
   {
-    "revision": "a7aa5da0eb9170ff9abe",
-    "url": "/GM-Dashboard/static/js/2.eb9dfd1a.chunk.js"
+    "revision": "8346170a53f9b0e153a8",
+    "url": "/GM-Dashboard/static/js/2.f83f3237.chunk.js"
   },
   {
-    "revision": "5ae8a960863c259bbb3d",
-    "url": "/GM-Dashboard/static/js/main.56a9f321.chunk.js"
+    "revision": "75396843827daeab8310",
+    "url": "/GM-Dashboard/static/js/main.74338cad.chunk.js"
   },
   {
     "revision": "2c106f5ec04b1d16d0f8",
