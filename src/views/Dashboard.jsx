@@ -40,6 +40,55 @@ import {
 } from "variables/charts.jsx";
 
 class Dashboard extends React.Component {
+
+  // new
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: [
+        {
+          'rank': 1,
+          'name': 'Amanda Gibbon',
+          'launches_closed': 45,
+        }, {
+          'rank': 2,
+          'name': 'E Gibbon',
+          'launches_closed': 3,
+        }
+      ]
+    }
+
+    this.tableHeaders = this.tableHeaders();
+    this.tableBody = this.tableBody();
+  }
+
+  // new
+  tableHeaders = () => {
+    let { data } = this.state;  // deconstruct state
+    let headers = Object.keys(data[0]);
+
+    return headers.map((el, ind) => (
+      <th key={ind}>
+        {el}
+      </th>
+    ))
+  }
+
+  // new
+  tableBody = () => {
+    let { data } = this.state;  // deconstruct state
+    let headers = Object.keys(data[0]);
+
+    return data.map((obj, ind) => (
+      <tr key={ind}>
+        {headers.map((header, ind) => {
+          return <td key={ind}>{obj[header]}</td>;
+        })}
+      </tr>)
+    )
+  };
+
   render() {
     return (
       <>
@@ -93,7 +142,7 @@ class Dashboard extends React.Component {
               <Card className="card-stats">
                 <CardBody>
                   <Row>
-                   <Col md="4" xs="4">
+                    <Col md="4" xs="4">
                       <div className="numbers text-center">
                         <p className="card-category">GM Base</p>
                         <CardTitle tag="p">48</CardTitle>
@@ -137,7 +186,7 @@ class Dashboard extends React.Component {
                 <CardFooter>
                   <hr />
                   <div className="legend">
-                    <i className="fa fa-circle text-success" /> Signed Up{" "} 
+                    <i className="fa fa-circle text-success" /> Signed Up{" "}
                     <i className="fa fa-circle text-danger" /> Opted Out{" "}
                     <i className="fa fa-circle text-gray" /> Undecided
                   </div>
@@ -157,119 +206,18 @@ class Dashboard extends React.Component {
                   <Table responsive>
                     <thead className="text-primary">
                       <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Closed</th>
+                        {this.tableHeaders}
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Anna Akins</td>
-                        <td>40</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Jenny Atkins</td>
-                        <td>38</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Kayley Edgin</td>
-                        <td>35</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Joe Fisher</td>
-                        <td>24</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>Fawn Gregory</td>
-                        <td>23</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>Kevin Kerr</td>
-                        <td>23</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>Sheila Lamb</td>
-                        <td>22</td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td>Al Magbag</td>
-                        <td>15</td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td>Alyssa Morgan</td>
-                        <td>13</td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>Lillian Quan</td>
-                        <td>11</td>
-                      </tr>
-                      <tr>
-                        <td>11</td>
-                        <td>Paul Sabovik</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>12</td>
-                        <td>Michael Scott</td>
-                        <td>0</td>
-                      </tr>
-                      <tr>
-                        <td>13</td>
-                        <td>Dakota Rice</td>
-                        <td>0</td>
-                      </tr>
-                      <tr>
-                        <td>14</td>
-                        <td>Minerva Hooper</td>
-                        <td>0</td>
-                      </tr>
-                      <tr>
-                        <td>15</td>
-                        <td>Sage Rodriguez</td>
-                        <td>0</td>
-                      </tr>
-                      <tr>
-                        <td>16</td>
-                        <td>Philip Chaney</td>
-                        <td>0</td>
-                      </tr>
-                      <tr>
-                        <td>17</td>
-                        <td>Corey Sliter</td>
-                        <td>0</td>
-                      </tr>
-                      <tr>
-                        <td>18</td>
-                        <td>Jennifer Walker</td>
-                        <td>0</td>
-                      </tr>
-                      <tr>
-                        <td>19</td>
-                        <td>Amanda Hale</td>
-                        <td>0</td>
-                      </tr>
-                      <tr>
-                        <td>20</td>
-                        <td>Amanda Gibbon</td>
-                        <td>0</td>
-                      </tr>
+                      {this.tableBody}
                     </tbody>
                   </Table>
                 </CardBody>
               </Card>
             </Col>
           </Row>
-          
+
         </div>
       </>
     );
