@@ -39,56 +39,160 @@ import {
   dashboardNASDAQChart
 } from "variables/charts.jsx";
 
+// your Example Data
+// you could declare your example data like this!
+// OR (scroll down to this.state)
+var tableData = [
+  {
+    "#": 1,
+    name: "Amanda Gibbon",
+    launchesClosed: 45
+  },
+  {
+    "#": 2,
+    name: "Amanda Hale",
+    launchesClosed: 43
+  },
+  {
+    "#": 3,
+    name: "Jeremy Helstrom",
+    launchesClosed: 27
+  },
+  {
+    "#": 4,
+    name: "Tina Khatthamane",
+    launchesClosed: 15
+  },
+  {
+    "#": 5,
+    name: "Nicholas Kosenkranius",
+    launchesClosed: 15
+  },
+  {
+    "#": 6,
+    name: "Whitney LaRene",
+    launchesClosed: 1
+  },
+  {
+    "#": 7,
+    name: "SusanStephens",
+    launchesClosed: 1
+  }
+];
+
 class Dashboard extends React.Component {
 
   // new
   constructor(props) {
     super(props);
 
+    // ...continuation from comment at the
+    // or store data in the "this.state"
+    // if it preferable to store it in "this.state" because of how important "state" is to react.js
+
+    // in REACT.js ALL application data, any peice of information that will or can change over the course of a someone using your app,
+    // should be stored in the STATE of the application.
+
+    // Please read more about STATE as it is a crucial part of REACT.js
+    // FYI: Everytime a property in "this.state" is changed, this triggers a refresh of the app.  which is the core functionality behind using a react.js app.
+    // dynamic loading
+
+    // so we should save the "data" we want to display in the state so in the future we can connect it to an API
+    // and have the application changed automatically
     this.state = {
       data: [
         {
-          'rank': 1,
-          'name': 'Amanda Gibbon',
-          'launches_closed': 45,
-        }, {
-          'rank': 2,
-          'name': 'E Gibbon',
-          'launches_closed': 3,
+          "#": 1,
+          name: "Amanda Gibbon",
+          launchesClosed: 45
+        },
+        {
+          "#": 2,
+          name: "Amanda Hale",
+          launchesClosed: 43
+        },
+        {
+          "#": 3,
+          name: "Jeremy Helstrom",
+          launchesClosed: 27
+        },
+        {
+          "#": 4,
+          name: "Tina Khatthamane",
+          launchesClosed: 15
+        },
+        {
+          "#": 5,
+          name: "Nicholas Kosenkranius",
+          launchesClosed: 15
+        },
+        {
+          "#": 6,
+          name: "Whitney LaRene",
+          launchesClosed: 1
+        },
+        {
+          "#": 7,
+          name: "SusanStephens",
+          launchesClosed: 1
         }
       ]
     }
 
+    // we need to expose our custom functions to our app so we need to declare them here.
+    // we are telling the app that anytime you see "this.tableHeaders" in the render()
+    // we want to run "this.tableHeaders()"
+    // we need to do this because of scope.  We can't just call this.tableHeaders()
+
+    // if none of that made sense, lol.
+    // Just know that you NEED to do this if you create a custom function otherwise you won't be able to use it in your the RENDOR()
+    // portion of the code.
     this.tableHeaders = this.tableHeaders();
     this.tableBody = this.tableBody();
   }
 
-  // new
-  tableHeaders = () => {
-    let { data } = this.state;  // deconstruct state
-    let headers = Object.keys(data[0]);
+  /**
+   * creates an array with all the <th> elements dynamically filled with the object properties in the array in the "this.state.data"
+   */
+  tableHeaders() {
+    // getting all PROPERTY KEYS of the this.state.data object (aka your table data)
+    let headers = Object.keys(this.state.data[0]);
 
-    return headers.map((el, ind) => (
-      <th key={ind}>
-        {el}
+    // if you use loops to dynamically create react components like this
+    // react.js will 'warn' you that you need a 'key' attribute added to your
+    // component.
+    // this is who react keeps track of the components internally, so do this to prevent
+    // bugs.
+    return headers.map((value, index) => (
+      <th key={index}>
+        {value}
       </th>
     ))
   }
 
-  // new
-  tableBody = () => {
-    let { data } = this.state;  // deconstruct state
-    let headers = Object.keys(data[0]);
+  /**
+   * creates an array with all the <tr> elements dynamically filled with the data in the "this.state.data"
+   * 1 OBJECT in the this.state.data = 1 row in the table
+   */
+  tableBody() {
+    // getting all PROPERTY KEYS of the this.state.data object (aka your table data)
+    let headers = Object.keys(this.state.data[0]);
 
-    return data.map((obj, ind) => (
-      <tr key={ind}>
-        {headers.map((header, ind) => {
-          return <td key={ind}>{obj[header]}</td>;
+    // performing a .map on an array automatically returns a new array without us needing to create a new one like this
+    // var tableRows = myArray.map()
+    return this.state.data.map((object, index) => (
+      <tr key={index}>
+        {headers.map((header, index2) => {
+          return (
+            <td key={index2}>
+              {object[header]}
+            </td>);
         })}
       </tr>)
     )
   };
 
+  // now that we have all our custom functions built out (tableBody and tableHeaders) we call them in our render function
   render() {
     return (
       <>
