@@ -39,47 +39,6 @@ import {
   dashboardNASDAQChart
 } from "variables/charts.jsx";
 
-// your Example Data
-// you could declare your example data like this!
-// OR (scroll down to this.state)
-var tableData = [
-  {
-    "#": 1,
-    name: "Amanda Gibbon",
-    launchesClosed: 45
-  },
-  {
-    "#": 2,
-    name: "Amanda Hale",
-    launchesClosed: 43
-  },
-  {
-    "#": 3,
-    name: "Jeremy Helstrom",
-    launchesClosed: 27
-  },
-  {
-    "#": 4,
-    name: "Tina Khatthamane",
-    launchesClosed: 15
-  },
-  {
-    "#": 5,
-    name: "Nicholas Kosenkranius",
-    launchesClosed: 15
-  },
-  {
-    "#": 6,
-    name: "Whitney LaRene",
-    launchesClosed: 1
-  },
-  {
-    "#": 7,
-    name: "SusanStephens",
-    launchesClosed: 1
-  }
-];
-
 class Dashboard extends React.Component {
 
   // new

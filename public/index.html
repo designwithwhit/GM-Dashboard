@@ -20,25 +20,19 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#000000" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#000000" />
+  <!--
             manifest.json provides metadata used when your web app is added to the
             homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
         -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="%PUBLIC_URL%/apple-icon.png"
-    />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/apple-icon.png" />
+  <!--
             Notice the use of %PUBLIC_URL% in the tags above.
             It will be replaced with the URL of the `public` folder during the build.
             Only files inside the `public` folder can be referenced from the HTML.
@@ -48,22 +42,97 @@
             Learn how to configure a non-root public URL by running `npm run build`.
         -->
 
-    <!--     Fonts and icons     -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
 
-    <title>Paper Dashboard React by Creative Tim</title>
-  </head>
-  <body>
-    <noscript> You need to enable JavaScript to run this app. </noscript>
-    <div id="root"></div>
-    <!--
+  <title>Paper Dashboard React by Creative Tim</title>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jsforce/1.9.1/jsforce.min.js"></script>
+  <script>
+
+    jsforce.browser.init({
+      clientId: '3MVG9CxwbdV68qJK.9sHfFOdA_ALMZ4SUhZbD1NFNUIpuLJXSI4MjgR1wEaxUhMUSmb0Av6ILhn.8B9sTjl0f',
+      // clientId: '3MVG9dCCPs.KiE4SymniyHC6UlBKt6FExqpDRaOa7QQrpW5S.jN70FC.q8fEe5SWlej7QO52ksduzYtErQdte',
+      redirectUri: 'http://localhost:3000/admin/dashboard'
+      // redirectUri: 'https://cdk--training.my.salesforce.com/services/oauth2'
+    });
+
+    console.log(jsforce)
+
+    // add event listener for the "connect" event
+    // the "connect" event is triggered after a successfull login
+    jsforce.browser.on('connect', function (conn) {
+      // get report reference
+      var reportId = '00O0U000000Huah';
+      var report = conn.analytics.report(reportId);
+
+      // execute report synchronously
+      report.execute({ details: true }, function (err, result) {
+        if (err) { return console.error(err); }
+        // console.log(result.reportMetadata);
+        // console.log(result.factMap["T!T"].rows);
+
+        // iterate through api data and return only users who have a launch with a status
+        // that starts with "Closed"
+        let filtered = result.factMap["T!T"].rows.map(element => {
+          return {
+            "name": element.dataCells[0].label,
+            "status": element.dataCells[2].label
+          }
+        }).filter(el => el.status.startsWith('Closed'));  //change this to === "Closed" in order to get accurate results
+
+        // console.log(filtered)
+
+        let data = [];
+
+        filtered.forEach(element => {
+          if (data.length <= 0) {
+            // run if array is empty
+            data.push({
+              "name": element.name,
+              "launchesClosed": 1
+            });
+          } else {
+            // check if name already exists in array
+            let found = false;
+            for (var i = 0; i < data.length; i++) {
+              if (data[i].name == element.name) {
+                found = true;
+                data[i].launchesClosed += 1;
+                break;
+              }
+            }
+
+            // if name isn't in array add it
+            if (!found) {
+              data.push({
+                "name": element.name,
+                "launchesClosed": 1
+              });
+            }
+          }
+        });
+
+        // console.log(data);
+
+        /* TODO
+        1. move this code to a separate file.
+        2. include reference to new file in Dashboard.jsx
+        3. write code to update state.data with data array after filtering is complete.
+        */
+
+      });
+    });
+
+  </script>
+</head>
+
+<body>
+  <noscript> You need to enable JavaScript to run this app. </noscript>
+  <button onclick="javascript:jsforce.browser.login();">Login</button>
+  <div id="root"></div>
+  <!--
             This HTML file is a template.
             If you open it directly in the browser, you will see an empty page.
 
@@ -73,5 +142,6 @@
             To begin the development, run `npm start` or `yarn start`.
             To create a production bundle, use `npm run build` or `yarn build`.
         -->
-  </body>
+</body>
+
 </html>
